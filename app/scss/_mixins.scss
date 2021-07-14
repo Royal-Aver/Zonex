@@ -8,3 +8,9 @@ $xl: 1200px;
 		@content;
 	}
 }
+
+@mixin s($width) {
+	@media only screen and (min-width: $width) {
+		@content;
+	}
+}

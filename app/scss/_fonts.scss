@@ -1,8 +1,17 @@
 @font-face {
-	font-family: "Quicksand-400";
-	font-weight: 400;
+	font-family: "Jost";
+	font-weight: 500;
 	font-style: normal;
-	src: url(../fonts/Quicksand-Regular.woff2) format("woff2");
-	src: url(../fonts/Quicksand-Regular.woff) format("woff");
+	src: url(../fonts/Jost-Medium.woff2) format("woff2");
+	src: url(../fonts/Jost-Medium.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Jost";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/Jost-Bold.woff2) format("woff2");
+	src: url(../fonts/Jost-Bold.woff) format("woff");
 	font-display: swap;
 }

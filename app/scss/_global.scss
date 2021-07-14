@@ -1,7 +1,19 @@
+body {
+	font-family: "Jost";
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 1.2;
+	color: $default-color;
+}
+
 .container {
-	max-width: 1200px;
+	max-width: 1355px;
 	padding: 0 15px;
 	margin: 0 auto;
+
+	&--big {
+		max-width: 1850px;
+	}
 }
 
 .sr-only {

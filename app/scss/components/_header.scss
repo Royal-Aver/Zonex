@@ -1,0 +1,151 @@
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 90px;
+	}
+
+	&__burger {
+		display: none;
+
+		@include r($md) {
+			display: block;
+			background-color: transparent;
+			border: none;
+			position: relative;
+			z-index: 2;
+			padding: 0 10px;
+
+			& span {
+				display: block;
+				width: 45px;
+				height: 5px;
+				background-color: $default-color;
+				margin: 8px 0;
+			}
+		}
+	}
+
+	&__logo {
+		margin: 0 auto;
+		width: 117px;
+		height: 22px;
+		object-fit: cover;
+	}
+
+	&__user-nav {
+		margin-left: 250px;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+
+		@include r($md) {
+			display: block;
+			position: absolute;
+			top: 90px;
+			right: 20%;
+			left: 0;
+			opacity: 0.95;
+			padding: 30px 30px 20px 30px;
+			background-color: $default-color;
+			height: 100vh;
+			color: #fff;
+			transform: translateX(-200%);
+			transition: transform 0.7s;
+
+			&--active {
+				transform: translateX(0%);
+			}
+		}
+	}
+
+	&__item {
+		font-size: 15px;
+
+		&:not(:last-child) {
+			margin-right: 45px;
+		}
+
+		@include r($md) {
+			margin-right: 0;
+			padding: 25px 0;
+		}
+	}
+
+	&__link {
+		border-bottom: 2px solid transparent;
+		transition: padding 0.5s, border-color 0.5s;
+
+		&:hover {
+			padding-bottom: 5px;
+			border-bottom: 2px solid $default-color;
+		}
+
+		@include r($md) {
+			padding: 20px 20px;
+		}
+	}
+}
+
+.user-nav {
+	display: flex;
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 25px;
+		}
+
+		&:last-child {
+			padding-right: 20px;
+		}
+	}
+
+	&__link {
+		&--padding {
+			padding-right: 20px;
+		}
+
+		path {
+			transition: fill 0.5s;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			path {
+				fill: $gray-color;
+			}
+		}
+	}
+
+	&__num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 3px;
+		padding: 0 5px;
+		font-size: 10px;
+		font-weight: 700;
+		background-color: $default-color;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		color: #fff;
+	}
+}
