@@ -1,5 +1,12 @@
 $(function () {
-	// 	$('.slider').slick({
+	$('.slider__inner').slick({
+		arrows: false,
+		dots: true,
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+	})
+
 	$('.header__burger').on('click', function () {
 		$('.menu__list').toggleClass('menu__list--active')
 	});

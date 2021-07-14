@@ -1,0 +1,98 @@
+.hero {
+	position: relative;
+	height: 100vh;
+	min-height: 700px;
+	background-color: $quill-gray;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+}
+
+.slider {
+	&__inner {
+		height: 100vh;
+	}
+
+	&__item {
+		position: relative;
+		height: 100%;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 100vh;
+	}
+
+	&__title {
+		max-width: 560px;
+		font-weight: 700;
+		font-size: 72px;
+		margin-bottom: 25px;
+	}
+
+	&__subtitle {
+		font-size: 18px;
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		max-height: 90%;
+	}
+
+	.slick-dots {
+		display: flex;
+		justify-content: center;
+		margin-top: -50px;
+
+		& li {
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+
+		& button {
+			position: relative;
+			bottom: 50px;
+			font-size: 0;
+			background-color: transparent;
+			width: 20px;
+			height: 20px;
+			border: none;
+			border-radius: 50%;
+			z-index: 1;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				width: 6px;
+				height: 6px;
+				background-color: rgba(255, 255, 255, 0.5);
+				z-index: -1;
+			}
+		}
+
+		& .slick-active button {
+			background-color: #fff;
+
+			&::before {
+				background-color: $default-color;
+			}
+		}
+	}
+}
