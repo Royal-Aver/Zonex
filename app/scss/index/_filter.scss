@@ -1,0 +1,40 @@
+.filter {
+	padding: 50px 0 10px;
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 50px;
+	}
+
+	&__btn-item {
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+
+	&__btn {
+		padding-bottom: 5px;
+		border: none;
+		background-color: transparent;
+		font-size: 24px;
+		color: $gray-color;
+		border-bottom: 2px solid transparent;
+		transition: color 0.7s, border-color 0.7s;
+
+		&:hover {
+			color: $default-color;
+			border-bottom: 2px solid $default-color;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+	}
+
+	&__item {
+		margin: 0 16px 40px;
+	}
+}
