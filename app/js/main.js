@@ -11,6 +11,10 @@ $(function () {
 		$('.menu__list').toggleClass('menu__list--active')
 	});
 
+	$('.marketing__close').on('click', function () {
+		$('.marketing--visible').remove('.marketing--visible')
+	})
+
 	// $(".menu__list a, .logo").on("click", function (event) {
 	// 	event.preventDefault();
 	// 	var id = $(this).attr('href'),
